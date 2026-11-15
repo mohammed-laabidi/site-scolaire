@@ -35,7 +35,7 @@
   // Validates credentials and redirects to the dashboard if correct
   function check_login() {
     if (check_empty_inputs()) return false;
-    if (inputUsername.value == "stagaire" && inputPassword.value == "stagaire123") {
+    if (inputUsername.value.trim() == "stagaire" && inputPassword.value.trim() == "stagaire123") {
       navigate("/dashboard.html");
     } else {
       showError("Incorrect username or password");
